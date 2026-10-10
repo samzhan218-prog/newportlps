@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Newport LPS Payment</title>
+  <style>
+    body { font-family: "Segoe UI", system-ui, sans-serif; line-height: 1.5; color: #1a1a1a; max-width: 42rem; margin: 2rem auto; padding: 0 1.25rem; }
+    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.75rem; }
+    p, li { font-size: 0.95rem; }
+    .meta { color: #444; margin-top: 0; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Newport LPS Payment extension<br>Effective date: 9 October 2026</p>
+
+  <p>Newport LPS Payment is a browser extension for hotel front-desk staff. It signs an operator in to a Newport backend chosen by the property, keeps that session on the workstation, and shows the LPS payment dialog on the property’s OPERA page.</p>
+  <p>The extension sends data only to the Backend URL and Admin UI URL that an administrator saves in Options. It does not send data to an analytics service, an advertising network, or any other third party.</p>
+
+  <h2>Information the extension handles</h2>
+  <ul>
+    <li><strong>Sign-in details.</strong> When you sign in, the extension sends your username, organisation code, and a hash of your password to the configured Backend URL. It does not store the password.</li>
+    <li><strong>Session.</strong> After a successful sign-in, the extension stores the session token, username, and menu permissions returned by that backend. It prefers browser session storage and uses local extension storage only if session storage is unavailable. Logging out, or saving a change in Options, deletes the session.</li>
+    <li><strong>Property settings.</strong> Options stores the organisation code, Backend URL, Admin UI URL, OPERA hostname, and the language you choose (English or Filipino). These stay on this browser until an administrator changes them or you remove the extension.</li>
+    <li><strong>Workstation status.</strong> The backend may report a workstation number and whether this PC is bound to a workstation. The extension shows that status. It does not read the computer’s IP address.</li>
+    <li><strong>Payment dialog.</strong> The extension opens the payment page from the configured backend inside a frame on the OPERA tab, and passes the session token so that page can load. Card numbers and other payment details entered in that page are handled by the Newport backend. The extension does not read, store, or transmit them.</li>
+  </ul>
+
+  <h2>How that information is used</h2>
+  <ul>
+    <li>To authenticate the operator and keep the payment connection open.</li>
+    <li>To show or hide the payment dialog on tabs whose host matches the configured OPERA hostname.</li>
+    <li>To open the Admin UI. If you are signed in, the session token, username, and menu list are placed in the page address hash so the Admin UI can continue the same session. The hash is not sent to the network as a query string.</li>
+    <li>To remember the language of the extension’s own login and options pages.</li>
+  </ul>
+  <p>The extension does not use this information for advertising, to build a profile for unrelated products, or to assess creditworthiness. It does not sell personal information.</p>
+
+  <h2>Browser permissions</h2>
+  <ul>
+    <li><strong>Storage</strong> holds the settings and session described above.</li>
+    <li><strong>Alarms</strong> wake the extension so the payment connection stays open. This does not collect information.</li>
+    <li><strong>Tabs</strong> is used to find OPERA tabs for the configured host and to open the Admin UI. The extension does not read browsing history or the contents of other pages.</li>
+    <li><strong>Site access</strong> includes the OPERA host used for the payment overlay, and local or HTTPS addresses so the property can point the extension at its own Newport backend and Admin UI. The extension contacts only the URLs saved in Options. It does not read other websites.</li>
+  </ul>
+
+  <h2>Where data is stored and how long it is kept</h2>
+  <p>Settings and the session stay in this browser’s extension storage. They are not copied to a GreenCloud server by the extension itself. The Newport backend you connect to stores and retains account and payment records under that system’s own policy.</p>
+  <p>The session remains until you log out, until Options are saved, or until the browser clears session storage. Settings remain until they are changed or the extension is removed. Removing the extension deletes the data it stored in the browser.</p>
+
+  <h2>Who can see it</h2>
+  <p>People who use this workstation can see the signed-in username and connection status in the extension. Administrators of the configured Newport backend and Admin UI can see the account and payment activity those systems record. Use HTTPS for the Backend URL and Admin UI URL except when you are testing on this computer.</p>
+
+  <h2>Children</h2>
+  <p>The extension is a workplace tool for hotel staff. It is not directed at children.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the effective date at the top of this page will be updated. Continued use of the extension after that date means the updated policy applies.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this extension: <a href="mailto:evan.wang@greencloud.com.cn">evan.wang@greencloud.com.cn</a>.</p>
+  <p>Questions about a session, a workstation binding, or payment data should go to your property’s Newport administrator. That administrator operates the backend this extension is configured to use.</p>
+</body>
+</html>
